@@ -23,16 +23,16 @@
 
 //TODO: Now try to create an alert with any phrase you like.
 
+alert('any phrase you like');
 
 
 
-
-//TODO: After alert works for you, comment it out(put '//' on the line where your code is and save changes) after refresh the page - 
+//TODO: After alert works for you, comment it out(put '//' on the line where your code is and save changes) after refresh the page -
 // it should not pop-up anymore.
 
 //TODO: What you say about trying console.log your message to browser? Send any message you like.
 
-
+console.log('any message you like');
 
 
 
@@ -52,7 +52,7 @@
 
 //TODO: Now create two empty variables named numberOne and numberTwo
 
-
+var numberOne, numberTwo;
 
 
 /*
@@ -65,8 +65,11 @@
 
 //TODO: Create 2 variables, 1 with your name and 2nd with your age and display them with alert pop-up box
 
+var name = 'Andrew';
+var age = 28;
 
-
+alert(name);
+alert(age);
 
 
 //TODO: Don't forget to comment out alerts if you don't want them to pop-up every time
@@ -83,8 +86,11 @@
 
 //TODO: Create 3 variables, 1st variable named ten with value 10 inside, 2nd variable named three with value 3. And finally 3rd variable named multipleOfNumbers that will be equal to 1st variable multiplied by the 2nd variable. And in the end display the value of multipleOfNumbers
 
+var ten = 10;
+var three = 3;
+var multipleOfNumbers = ten * three;
 
-
+console.log(multipleOfNumbers);
 
 
 /* Functions
@@ -107,20 +113,27 @@
 //Step 2 - This function should return us a sum of num1 and num2.
 //Step 3 - Call the function passing numbers 2 and 3 as arguments. To see result you can alert it or console.log it - to be sure that it works right.
 
+var add = function (num1, num2) {
+    return num1 + num2;
+}
 
-
-
+var sum = add(2, 3);
+console.log(sum);
 
 
 //TODO: Great, you made it! Now let's do another function named 'subtract' and pass 2 arguments num1 and num2.
 //Call on it with numbers 5 and 1 and console.log the result.
 //PS: do you know that instead of numbers you can create variables that store those numbers and pass them as an arguments to your function, try it up.
 
+var subtract = function (num1, num2) {
+    return num1 - num2;
+}
 
+var five = 5;
+var one = 1;
 
-
-
-
+var difference = subtract(five, one);
+console.log(difference);
 
 
 /*If-else statements
@@ -157,24 +170,13 @@
 // if we have operator equal to '+' we call add function with any two numbers, else subtract function with any 2 numbers.
 //Don't forget to console.log it to see the result
 
+var operator = '&';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if (operator === '+') {
+    console.log(add(1, 2));
+} else {
+    console.log(subtract(1, 2));
+}
 
 
 /*If - else if - else
@@ -195,13 +197,32 @@
 // checking if it is equal to '/' - call 'divide' function, if it is '*' call multiply function,
 // else console.log - "Sorry, we don't know this operator".
 
+var divide = function (num1, num2) {
+    return num1 / num2;
+}
+
+var multiply = function (num1, num2) {
+    return num1 * num2;
+}
 
 
+var result;
+var one = 1;
+var two = 2;
 
+if (operator === '+') {
+    result = add(one, two);
+} else if (operator === '-') {
+    result = subtract(one, two);
+} else if (operator === '*') {
+    result = multiply(one, two);
+} else if (operator === '/') {
+    result = divide(one, two);
+} else {
+    result = "Sorry, we don't know this operator";
+}
 
-
-
-
+console.log(result);
 
 
 
