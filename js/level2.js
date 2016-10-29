@@ -20,7 +20,7 @@
 
 //TODO: create your own array named favouriteFood and write in couple of things you like.
 
-
+var favouriteFood = ['chilli', 'pasta', 'chocolate'];
 
 
 
@@ -33,7 +33,7 @@
 
 //TODO: check up on how many values you have in your array favouriteFood and console.log it
 
-
+console.log(favouriteFood.length);
 
 
 
@@ -51,7 +51,7 @@
 
 //TODO: get 3rd element from your array favouriteFood and console.log it
 
-
+console.log(favouriteFood[2]);
 
 
 
@@ -71,9 +71,9 @@
 //console.log whole array to check
 // Dont forget, that index position starts with 0
 
+favouriteFood[0] = 'salmon';
 
-
-
+console.log(favouriteFood);
 
 
 
@@ -89,9 +89,9 @@
 //TODO: let's extend your list of favouriteFood and add one more value in it.
 //console.log list of your favouriteFood and check
 
+favouriteFood.push('tea');
 
-
-
+console.log(favouriteFood);
 
 
 
@@ -126,11 +126,11 @@
 
 //TODO: Using 'while loop' tell your computer to print you numbers from 10 to 1
 
-
-
-
-
-
+var number = 0;
+while (number < 10) {
+  console.log('JavaScript is awesome!');
+  number = number + 1;
+}
 
 
 /* For loops
@@ -144,10 +144,9 @@
 
 //TODO: now, let's print every 3rd number from 3 to 22 using 'for loop'
 
-
-
-
-
+for (var i = 3; i <= 22; i = i + 3) {
+  console.log(i);
+}
 
 
 /* Iterating through arrays
@@ -163,14 +162,9 @@
 
 //TODO: try it out with your list of favouriteFood that you created before.
 
-
-
-
-
-
-
-
-
+for (var i = 0; i < favouriteFood.length; i = i + 1) {
+  console.log(favouriteFood[i]);
+}
 
 
 /* Loops and Logic
@@ -195,18 +189,17 @@
 //16 % 4 = 0 - as in 16 we have 4*4
 //19 % 4 = 3 - as in 19 we have 4*4 + 3 etc
 
-
-
-
-
-
-
-
-
-
-
-
-
+for (var i = 1; i <= 50; i = i + 1) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('FizzBuzz');
+  } else if (i % 3 === 0) {
+    console.log('Fizz');
+  } else if (i % 5 === 0) {
+    console.log('Buzz');
+  } else {
+    console.log(i);
+  }
+}
 
 
 ////////////////////////////////////////////////////////////////////////
