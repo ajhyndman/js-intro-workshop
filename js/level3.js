@@ -58,13 +58,8 @@
 //TODO: Now it's your turn - get the h1 tag from the page and store it into variable named
 //ourTitle. console.log it and see what you will get.
 
-
-
-
-
-
-
-
+var ourTitle = document.querySelector('h1');
+console.log(ourTitle);
 
 
 /*
@@ -78,23 +73,20 @@
 
 //TODO: get all <li> elements from the page in variable named mediaLinks
 
-
+var mediaLinks = document.querySelectorAll('li');
 
 
 //TODO: now console.log mediaLinks.length
 
-
+console.log(mediaLinks);
 
 
 //TODO: do you still remember arrays that we had in previous sections? Using this knowledge
 //iterate through whole meadiaLinks items and print them out.
 
-
-
-
-
-
-
+for (var i = 0; i < mediaLinks.length; i = i + 1) {
+  console.log(mediaLinks[i]);
+}
 
 
 /*
@@ -108,13 +100,8 @@
 
 //TODO: get the content of 'h1' element and console.log it
 
-
-
-
-
-
-
-
+var ourTitle = document.querySelector('h1');
+console.log(ourTitle.innerHTML);
 
 
 /*
@@ -129,8 +116,7 @@
 
 //TODO: change content of the 'h1' with anything you like
 
-
-
+ourTitle.innerHTML = 'Oh look, another Gastly!'
 
 
 /*
@@ -144,8 +130,8 @@
 
 //TODO: replace the value of 'src' attribute for our img tag with "img/kittens.jpeg"
 
-
-
+var image = document.querySelector('img');
+image.src = 'img/kittens.jpeg';
 
 
 /*
@@ -162,10 +148,9 @@
 
 //TODO: get any element on the page and change some styles for it
 
+var body = document.querySelector('body');
 
-
-
-
+body.style.backgroundColor = '#F9F9F9';
 
 
 /*
@@ -187,21 +172,11 @@
 //Let's create a new image with source logo and put it into header.
 //PS: you also can give styles to the new node that you create.
 
+var logo = document.createElement('img');
+logo.src = 'img/logo.png';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var header = document.querySelector('#logo');
+header.appendChild(logo);
 
 
 ////////////////////////////////////////////////////////////////////////
